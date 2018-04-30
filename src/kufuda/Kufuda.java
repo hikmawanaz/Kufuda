@@ -24,6 +24,8 @@ public class Kufuda {
         System.out.println("2. Fungsi FIBONACCI");
         System.out.println("3. Fungsi BILANGAN PRIMA KE-N");
         System.out.println("4. Fungsi PENENTU GANJIL GENAP");
+         System.out.println("5. Fungsi SEGITIGA BINTANG");
+        System.out.println("6. Fungsi SISA BAGI");
 
         Scanner input = new Scanner(System.in);
 
@@ -76,6 +78,16 @@ public class Kufuda {
                     System.out.println(prima + " adalah bilangan ganjil");
                 }
                 break;
+                case 5:
+                System.out.println("Masukan jumlah bintang yang diinginkan:");
+                int inputbintang = input.nextInt();
+                bintang(inputbintang);
+                case 6:
+                  System.out.println("Masukan angka pertama:");
+                  int inputangka = input.nextInt();
+                  System.out.println("Masukan pembagi:");
+                    int inputpembagi = input.nextInt();
+                    bagi(inputangka,inputpembagi );
             default:
                 System.out.println("Menu tidak tersedia");
                 break;
@@ -122,5 +134,33 @@ public class Kufuda {
         return true;
 
     }
+ public static void bintang(int n){
+         int i,j,k;
+for(i=1; i<=n; i++)
+{
+for(j=n-1; j>=i; j--)
+{
+System.out.print(" ");
+}
+for(k=1; k<=(2*i-1); k++)
+{
+System.out.print("*");
+}
+System.out.println("");
+}
+     }
+     public static void bagi(int a, int b){
+         int angka = a;
+         int pembagi = b;
+         int hasilPembagi=angka/pembagi;    // Operator (/) menampilkan hasil bagi dari 10:3=3
+        int hasilSisa=angka%pembagi;    // Operator (%) menampilkan sisa bagi yaitu sisa 1
+        // menampilkan output
+        System.out.println("");
+        System.out.println("OUTPUT HASIL dari PEMBAGI :");
+        System.out.println(angka+" : "+pembagi+" = "+hasilPembagi);
+        System.out.println("OUTPUT dari SISA PEMBAGI :");
+        System.out.println(+angka+" : "+pembagi+" = "+hasilSisa);
+     }
+
 
 }
