@@ -79,16 +79,29 @@ public class Kufuda {
                 }
                 break;
             case 5:
-                System.out.println("Masukan jumlah bintang yang diinginkan:");
+                 System.out.println("Masukan jumlah bintang yang diinginkan dari 1 sampai 100:");
                 int inputbintang = input.nextInt();
+                if (inputbintang<=0||inputbintang>100){
+                    System.out.println("Angka yang anda masukkan tidak sesuai dengan ketentuan");
+                }
+                else{
                 bintang(inputbintang);
+                }
                 break;
             case 6:
-                System.out.println("Masukan angka pertama:");
+                System.out.println("Masukan angka pertama (1-100):");
                 int inputangka = input.nextInt();
-                System.out.println("Masukan pembagi:");
+                System.out.println("Masukan pembagi(1-100):");
                 int inputpembagi = input.nextInt();
+                if (inputangka<=0||inputangka>100){
+                    System.out.println("Angka yang anda masukkan tidak sesuai dengan ketentuan");
+                }
+                if (inputpembagi<=0||inputpembagi>100){
+                    System.out.println("Pembagi yang anda masukkan tidak sesuai dengan ketentuan");
+                }
+                else{
                 bagi(inputangka, inputpembagi);
+                }
                 break;
             default:
                 System.out.println("Menu tidak tersedia");
